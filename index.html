@@ -63,13 +63,6 @@ body::before{
     box-shadow:0 0 30px rgba(255,20,147,0.9);
 }
 
-.iframe-musica{
-    display:none;
-    margin-bottom:40px;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 0 40px rgba(255,20,147,0.4);
-}
 
 /* Carta */
 .carta{
@@ -145,17 +138,15 @@ body::before{
 
 <div class="contenedor">
 
-<button class="boton-musica" onclick="mostrarMusica()">Reproducir nuestra canción ✨</button>
+<button class="boton-musica" onclick="abrirMusica()">
+    La canción ✨
+</button>
 
-<div class="iframe-musica" id="musica">
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/WZNz5umPjEY"
-title="YouTube video player"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen>
-</iframe>
-</div>
+<script>
+function abrirMusica(){
+    window.open("https://youtu.be/WZNz5umPjEY", "_blank");
+}
+</script>
 
 <div class="carta">
 
@@ -219,12 +210,6 @@ Así que, esta noche, mientras miro las estrellas, quiero que sepas que eres la 
 
 </div>
 </div>
-
-<script>
-function mostrarMusica(){
-    document.getElementById("musica").style.display="block";
-}
-</script>
 
 </body>
 </html>
