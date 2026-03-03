@@ -5,111 +5,112 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carta de Amor</title>
 
-<!-- Tipografías elegantes -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 body{
     margin:0;
     padding:0;
-    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:100vh;
-    overflow-x:hidden;
+    background: radial-gradient(circle at top, #2b0f2f, #120016 70%);
+    font-family:'Libre Baskerville', serif;
+    overflow:hidden;
 }
 
-/* Fondo romántico sutil */
+/* Fondo romántico animado */
 body::before{
     content:"";
     position:fixed;
     width:200%;
     height:200%;
-    background: radial-gradient(circle at 20% 30%, rgba(255,105,180,0.1), transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(255,182,193,0.1), transparent 40%);
-    animation: mover 12s infinite alternate ease-in-out;
-    z-index:-1;
+    background:
+        radial-gradient(circle, rgba(255,0,102,0.08) 2px, transparent 3px);
+    background-size: 60px 60px;
+    animation: movimiento 25s linear infinite;
+    z-index:0;
 }
 
-@keyframes mover{
-    0%{transform:translate(0,0);}
-    100%{transform:translate(-5%, -5%);}
+@keyframes movimiento{
+    from{ transform:translateY(0);}
+    to{ transform:translateY(-200px);}
 }
 
 .carta{
-    background: rgba(255,255,255,0.95);
-    width:90%;
-    max-width:850px;
-    padding:60px 50px;
-    border-radius:20px;
-    box-shadow:0 20px 50px rgba(0,0,0,0.4);
-    font-family:'Cormorant Garamond', serif;
-    color:#333;
-    line-height:1.8;
     position:relative;
+    z-index:1;
+    width:85%;
+    max-width:900px;
+    padding:60px;
+    border-radius:25px;
+    background: rgba(20, 0, 30, 0.75);
+    backdrop-filter: blur(15px);
+    box-shadow:0 0 60px rgba(255,0,120,0.25);
+    color:#f5e9f7;
 }
 
 .titulo{
     font-family:'Playfair Display', serif;
-    font-size:40px;
+    font-size:42px;
     text-align:center;
-    margin-bottom:40px;
-    color:#b22222;
+    margin-bottom:30px;
+    letter-spacing:2px;
+    color:#ffb6e6;
 }
 
 .fecha{
     text-align:right;
     font-size:18px;
-    margin-bottom:30px;
-    font-style:italic;
+    margin-bottom:35px;
+    opacity:0.8;
 }
 
 .parrafo{
     font-size:22px;
-    margin-bottom:25px;
+    line-height:1.9;
+    margin-bottom:28px;
     text-align:justify;
 }
 
 .firma{
     margin-top:40px;
-    font-size:24px;
     text-align:right;
-    font-weight:600;
+    font-size:24px;
+    font-weight:bold;
 }
 
-/* Frase neón especial */
+/* Frase final neón especial */
 .neon{
     margin-top:60px;
     text-align:center;
     font-family:'Playfair Display', serif;
     font-size:30px;
     font-weight:600;
-    color:#fff;
+    color:#ff66cc;
     text-shadow:
-        0 0 5px #ff4da6,
-        0 0 10px #ff4da6,
-        0 0 20px #ff1493,
-        0 0 40px #ff1493,
+        0 0 5px #ff33aa,
+        0 0 15px #ff1493,
+        0 0 30px #ff1493,
         0 0 60px #ff1493;
-    animation: brillo 2s ease-in-out infinite alternate;
+    animation: neonGlow 2s ease-in-out infinite alternate;
 }
 
-@keyframes brillo{
+@keyframes neonGlow{
     from{
         text-shadow:
-        0 0 5px #ff99cc,
-        0 0 10px #ff4da6,
-        0 0 20px #ff1493,
-        0 0 30px #ff1493;
+            0 0 5px #ff66cc,
+            0 0 15px #ff1493,
+            0 0 25px #ff1493,
+            0 0 40px #ff1493;
     }
     to{
         text-shadow:
-        0 0 10px #ff66b2,
-        0 0 20px #ff1493,
-        0 0 30px #ff1493,
-        0 0 50px #ff1493,
-        0 0 70px #ff1493;
+            0 0 10px #ff99dd,
+            0 0 25px #ff1493,
+            0 0 40px #ff1493,
+            0 0 70px #ff1493;
     }
 }
 </style>
@@ -118,43 +119,55 @@ body::before{
 <body>
 
 <div class="carta">
-    <div class="titulo">Mi Amor Eterno</div>
 
-    <div class="fecha">Lunes, 2 de marzo de 2026 – Por la noche</div>
+    <div class="titulo">Mi Amor Infinito</div>
+
+    <div class="fecha">Lunes, 2 de marzo de 2026 — Por la noche</div>
 
     <div class="parrafo">
-<P><STRONG>Mi niña linda,</STRONG></P>
-      
-Hoy es lunes 2 de marzo de 2026 por la noche… y mientras el mundo poco a poco se sumerge en el silencio, mi corazón hace exactamente lo contrario: late más fuerte, más profundo, más intensamente por ti.
-
-La noche tiene algo distinto hoy. El aire parece más suave, las estrellas más brillantes y la luna más cómplice. Como si el universo entero supiera que estoy aquí, escribiéndote con el alma abierta, dejando que cada palabra lleve el peso hermoso de todo lo que siento por ti.
+        
+Hoy es lunes 2 de marzo de 2026 por la noche… y mientras el mundo poco a poco se sumerge en el silencio, mi corazón hace exactamente lo contrario: late más fuerte, más profundo, más intensamente por ti. La noche tiene algo distinto hoy. El aire parece más suave, las estrellas más brillantes y la luna más cómplice. Como si el universo entero supiera que estoy aquí, escribiéndote con el alma abierta, dejando que cada palabra lleve el peso hermoso de todo lo que siento por ti.
 
 No sé en qué momento exacto te convertiste en mi pensamiento constante, en mi sonrisa automática, en mi lugar favorito. Solo sé que, desde que llegaste a mi vida, algo dentro de mí cambió para siempre. Es como si antes viviera en tonos suaves y, de pronto, tú encendiste todos los colores. Me enseñaste que amar no es solo sentir… es entregarse sin miedo, es mirar a alguien y saber que ahí quieres quedarte.
 
-Esta noche pienso en tus ojos. En esa forma tan tuya de mirarme que me desarma, que me hace sentir invencible y vulnerable al mismo tiempo. Pienso en tu risa, en cómo suena como música que calma cualquier tormenta en mi pecho. Pienso en tu voz, en tus abrazos, en tu manera de existir… y me doy cuenta de que todo en ti me enamora.
+Esta noche pienso en tus ojos. En esa forma tan tuya de mirarme que me desarma, que me hace sentir invencible y vulnerable al mismo tiempo. Pienso en tu risa, en cómo suena como música que calma cualquier tormenta en mi pecho. Pienso en tu voz, en tus abrazos, en tu manera de existir… y me doy cuenta de que todo en ti me enamora. Cada pequeño detalle que te hace ser quien eres, cada gesto que compartimos, cada palabra que intercambiamos, se convierte en un ladrillo más en la hermosa construcción de nuestra historia.
 
-Te amo con una intensidad que a veces me asusta, porque nunca había sentido algo tan grande. Te amo cuando sonríes, cuando te enojas un poquito, cuando sueñas en voz alta, cuando te quedas callada pensando. Te amo en tus días de luz y en tus días grises. Te amo completa, real, imperfectamente perfecta.
+Te amo con una intensidad que a veces me asusta, porque nunca había sentido algo tan grande. Te amo cuando sonríes, cuando te enojas un poquito, cuando sueñas en voz alta, cuando te quedas callada pensando. Te amo en tus días de luz y en tus días grises. Te amo completa, real, imperfectamente perfecta. La forma en que enfrentas la vida, tu valentía, tu pasión por las cosas que amas, todo eso me inspira a ser mejor cada día.
 
-Si esta noche pudiera hacer un deseo, no pediría riquezas ni éxitos. Pediría tiempo. Tiempo para seguir tomándote de la mano. Tiempo para seguir aprendiendo tus miedos y cuidarlos como si fueran míos. Tiempo para construir recuerdos contigo que algún día contemos riendo. Tiempo para seguir eligiéndote cada día.
+Si esta noche pudiera hacer un deseo, no pediría riquezas ni éxitos. Pediría tiempo. Tiempo para seguir tomándote de la mano. Tiempo para seguir aprendiendo tus miedos y cuidarlos como si fueran míos. Tiempo para construir recuerdos contigo que algún día contemos riendo. Tiempo para seguir eligiéndote cada día. Porque eso es lo que quiero hacer: elegirte. No solo hoy, no solo cuando todo es fácil, sino incluso cuando el camino tenga curvas. Elegirte cuando estemos cansados, cuando tengamos dudas, cuando el mundo intente distraernos. Elegirte porque mi corazón ya tomó su decisión hace mucho… y esa decisión eres tú.
 
-Porque eso es lo que quiero hacer: elegirte. No solo hoy, no solo cuando todo es fácil, sino incluso cuando el camino tenga curvas. Elegirte cuando estemos cansados, cuando tengamos dudas, cuando el mundo intente distraernos. Elegirte porque mi corazón ya tomó su decisión hace mucho… y esa decisión eres tú.
+Quiero ser tu refugio cuando el día haya sido pesado. Quiero ser la persona a la que mires y sientas paz. Quiero que cuando escuches mi nombre, sientas lo mismo que yo siento cuando escucho el tuyo: una mezcla de emoción, ternura y una felicidad que no cabe en el pecho. Quiero ser el lugar al que siempre quieras volver, el abrazo que te consuele y la sonrisa que ilumine tus días. Quiero que sepas que siempre estaré aquí para ti, en cada paso que des, en cada desafío que enfrentes.
 
-Quiero ser tu refugio cuando el día haya sido pesado. Quiero ser la persona a la que mires y sientas paz. Quiero que cuando escuches mi nombre, sientas lo mismo que yo siento cuando escucho el tuyo: una mezcla de emoción, ternura y una felicidad que no cabe en el pecho.
+Esta noche, lunes 2 de marzo de 2026, quiero que recuerdes algo muy claro: no estás sola en este mundo. Tienes a alguien que piensa en ti antes de dormir y al despertar. Tienes a alguien que agradece cada segundo que compartes conmigo. Tienes a alguien que no juega con tus sentimientos, que los respeta, los cuida y los honra. Quiero que sepas que cada momento a tu lado es un regalo que atesoro profundamente. Desde nuestras charlas interminables hasta esos silencios cómodos que compartimos, cada instante es una joya en mi corazón.
 
-Esta noche, lunes 2 de marzo de 2026, quiero que recuerdes algo muy claro: no estás sola en este mundo. Tienes a alguien que piensa en ti antes de dormir y al despertar. Tienes a alguien que agradece cada segundo que compartes conmigo. Tienes a alguien que no juega con tus sentimientos, que los respeta, los cuida y los honra.
+A veces cierro los ojos e imagino nuestro futuro. No importa dónde estemos ni cómo sea la vida… si estoy contigo, sé que todo valdrá la pena. Porque tú no eres solo mi novia. Eres mi compañera, mi inspiración, mi alegría diaria, mi paz en medio del caos. Imagino los días en los que compartiremos risas y aventuras, los momentos de tranquilidad en los que simplemente disfrutemos de la compañía del otro, y las noches en las que nos perderemos en conversaciones profundas bajo un cielo estrellado.
 
-A veces cierro los ojos e imagino nuestro futuro. No importa dónde estemos ni cómo sea la vida… si estoy contigo, sé que todo valdrá la pena. Porque tú no eres solo mi novia. Eres mi compañera, mi inspiración, mi alegría diaria, mi paz en medio del caos.
+Si pudiera abrazarte ahora mismo, lo haría tan fuerte que sentirías todo lo que estas palabras intentan decir. Te besaría la frente con esa ternura que nace cuando el amor es puro. Te miraría fijamente y, sin decir nada, dejaría que mis ojos te prometan lo que mi corazón ya decidió: que voy a cuidarte, respetarte y amarte con todo lo que soy. Quiero que sepas que cada vez que te miro, me doy cuenta de lo afortunado que soy de tenerte en mi vida. Tu risa, tu luz, tu esencia, todo en ti me llena de una felicidad indescriptible.
 
-Si pudiera abrazarte ahora mismo, lo haría tan fuerte que sentirías todo lo que estas palabras intentan decir. Te besaría la frente con esa ternura que nace cuando el amor es puro. Te miraría fijamente y, sin decir nada, dejaría que mis ojos te prometan lo que mi corazón ya decidió: que voy a cuidarte, respetarte y amarte con todo lo que soy.
+Gracias por existir. Gracias por quedarte. Gracias por amarme como lo haces. Gracias por ser tú, por ser auténtica, por ser esa persona maravillosa que ilumina mis días. Cada día a tu lado es una nueva oportunidad para descubrir algo más sobre ti, algo más sobre nosotros. Me encanta aprender de ti, de tus sueños y de tus anhelos, y me emociona pensar en cómo podemos construir un futuro juntos, lleno de amor y aventuras.
 
-Gracias por existir. Gracias por quedarte. Gracias por amarme como lo haces.
+Que esta noche te duermas sintiendo mi amor rodeándote, como si fuera una manta invisible que te protege y te susurra lo importante que eres para mí. Quiero que cada vez que cierres los ojos, sientas mi presencia a tu lado, mi energía abrazándote, mi corazón latiendo por ti. Te amo con una fuerza que no conoce límites. Te amo con una pasión que no se apaga. Te amo hoy, mañana y en cada noche que el universo nos regale.
 
-Que esta noche te duermas sintiendo mi amor rodeándote, como si fuera una manta invisible que te protege y te susurra lo importante que eres para mí.
+Siempre que miro hacia el futuro, veo un camino lleno de posibilidades, y en cada uno de esos caminos, te veo a ti. Me imagino viajando juntos, explorando nuevos lugares, creando recuerdos que atesoraremos para siempre. Me imagino construyendo un hogar contigo, un lugar donde cada rincón cuente nuestra historia, donde cada objeto tenga un significado especial, donde cada día sea una nueva aventura. 
 
-Te amo con una fuerza que no conoce límites. Te amo con una pasión que no se apaga. Te amo hoy, mañana y en cada noche que el universo nos regale.
+La idea de formar una familia contigo me llena de alegría. Imaginar a nuestros hijos corriendo por la casa, llenándola de risas y amor, es un sueño que me emociona profundamente. Quiero ser un padre presente, un compañero que guíe y apoye, que comparta con ellos la belleza de la vida y les enseñe a amar con la misma intensidad con la que te amo a ti. 
+
+En cada pequeño gesto, en cada palabra de aliento, en cada abrazo, quiero que nuestros hijos sientan el amor que nos une. Quiero que sepan que el amor verdadero existe, que se construye día a día, que se elige en cada momento. Quiero que crezcan sabiendo que el amor es un viaje, no un destino, y que siempre hay espacio para crecer y aprender juntos.
+
+A medida que escribo estas palabras, me doy cuenta de que el amor que siento por ti no tiene límites. Es un océano vasto y profundo, lleno de misterios y maravillas. Cada día, descubro nuevas capas de este amor, y cada descubrimiento me acerca más a ti. Me encanta explorar contigo, conocer tus pensamientos más íntimos, tus sueños más locos, tus miedos más profundos. Quiero ser tu confidente, tu apoyo incondicional, el que siempre esté a tu lado, sin importar las circunstancias.
+
+Mis días son más brillantes gracias a ti. Cada mañana, al despertar, siento una gratitud inmensa por tenerte en mi vida. Me encanta ver cómo el sol ilumina tu rostro, cómo tus ojos brillan con cada nueva idea, con cada nuevo sueño que compartes conmigo. Me encanta ser parte de tu vida, de tus logros, de tus desafíos. Quiero celebrar cada victoria contigo, por pequeña que sea, y estar a tu lado en cada momento difícil, para que nunca te sientas sola.
+
+Hoy, quiero que sepas que estoy aquí para ti, siempre. En cada paso que des, en cada decisión que tomes, en cada sueño que persigas, quiero ser tu apoyo, tu compañero, tu amor. Quiero que sientas que puedes contar conmigo en todo momento, que siempre estaré dispuesto a escucharte, a aconsejarte, a reír contigo y a llorar contigo. 
+
+Quiero que nuestras vidas sigan entrelazándose, que cada día sea una nueva oportunidad para construir nuestra historia juntos. Quiero que sigamos creciendo como pareja, aprendiendo el uno del otro, apoyándonos mutuamente en nuestras metas y sueños. Quiero que nunca perdamos la capacidad de soñar juntos, de imaginar un futuro lleno de amor y felicidad.
+
+Así que, esta noche, mientras miro las estrellas, quiero que sepas que eres la estrella más brillante en mi vida. Eres la razón por la que sonrío cada día, la razón por la que me esfuerzo por ser mejor. Eres mi inspiración, mi amor, mi todo. Te amo con una profundidad que no puedo expresar completamente con palabras, pero espero que sientas cada letra, cada frase, cada latido de mi corazón al leer esto.
+
+    </div>
+
     <div class="firma">
-        Siempre tuyo,<br>
-        Con todo mi amor.
+        Siempre tuyo, con el corazón rendido a ti.
       <p><strong>JUAN KALETH MENDOZA PRIMERA 💜</strong></p>
     </div>
 
@@ -163,7 +176,8 @@ Te amo con una fuerza que no conoce límites. Te amo con una pasión que no se a
       <P><STRONG>NO PODIA DEJAR ESTA NOCHE SIN CARTA PRECIOSA</STRONG></P>
       <P><strong>TE AMO MUCHO VALERIA PETRO VILLAZÓN AUNQUE LA LUNA Y LAS ESTRELLAS SEAN DIFÍCILES DE VER DE CERCA YO YA LAS HE VISTO TUS OJOS SON HERMOSOS TANTO QUE PARECEN GALAXIA MI NIÑA NO LO OLVIDES, ERES MI GALAXIA ETERNA</strong></P>
     </div>
+
 </div>
 
 </body>
-  </html>
+</html>
